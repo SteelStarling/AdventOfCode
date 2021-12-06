@@ -14,16 +14,16 @@ public class D3P2 {
         // split by line
         String[] inputLines = input.split("\r\n");
 
-        List<String> o2Lines = new ArrayList<String>(inputLines.length);
-        List<String> co2Lines = new ArrayList<String>(inputLines.length);
+        List<String> o2Lines = new ArrayList<>(inputLines.length);
+        List<String> co2Lines = new ArrayList<>(inputLines.length);
 
         for(int i = 0; i < inputLines.length; i++) {
             o2Lines.add(inputLines[i]);
             co2Lines.add(inputLines[i]);
         }
 
-        int o2Rate = 0;
-        int co2Rate = 0;
+        int o2Rate;
+        int co2Rate;
 
         // loop through each character
         for(int i = 0; i < inputLines[0].length(); i++) {
@@ -54,23 +54,52 @@ public class D3P2 {
             }
 
             char o2Common = '1';
-            if(o2Ones > o2Zeros) {
+            if(o2Ones >= o2Zeros) {
                 o2Common = '0';
             }
 
-            char co2Common = '1'
-            if(co2Ones > co2Zeros) {
-                co2Common = '0';
+            char co2Common = '0';
+            if(co2Ones >= co2Zeros) {
+                co2Common = '1';
             }
 
+            List<String> o2Removes = new ArrayList<>(o2Lines.size());
+            List<String> co2Removes = new ArrayList<>(co2Lines.size());
+
+            //add bad items in list to remove list
             for(String s : o2Lines) {
-                s.charAt(j);
+                if(s.charAt(i) == o2Common) {
+                    o2Removes.add(s);
+                }
+            }
+
+            if(co2Lines.size() != 1) {
+                for(String s : co2Lines) {
+                    if(s.charAt(i) == co2Common) {
+                        co2Removes.add(s);
+                    }
+                }
+            }
+
+            //remove items in remove list from list
+            for(String s : o2Removes) {
+                o2Lines.remove(s);
+            }
+
+            if(co2Lines.size() != 1) {
+                for(String s : co2Removes) {
+                    if(co2Lines.size() != 1) {
+                        co2Lines.remove(s);
+                    }
+                }
             }
         }
 
         //calculate ratings
-        o2Rate = Integer.parseInt(o2Lines.get(0));
-        co2Rate = Integer.parseInt(co2Lines.get(0));
+        o2Rate = Integer.parseInt(o2Lines.get(0), 2);
+        co2Rate = Integer.parseInt(co2Lines.get(0), 2);
+
+        System.out.println("o2Rate: " + o2Rate + "   co2Rate: " + co2Rate);
 
         //calculate life support rating
         int lifeSupportRating = o2Rate * co2Rate;
