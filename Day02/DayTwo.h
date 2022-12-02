@@ -11,6 +11,16 @@ using namespace std;
 #ifndef ADVENTOFCODE2022_DAYTWO_H
 #define ADVENTOFCODE2022_DAYTWO_H
 
+namespace DayTwo {
 
+    const string PATH = "Day02/";
+
+    int main();
+
+    void solvePartOne(string file);
+
+    void solvePartTwo(string file);
+
+}
 
 #endif //ADVENTOFCODE2022_DAYTWO_H

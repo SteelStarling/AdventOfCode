@@ -1,25 +1,31 @@
 //
 // Created by Taylor Hancock on 12/01/22.
 //
+
 #include "DayOne.h"
+using namespace DayOne;
 
 
-int DayOne() {
+int main() {
+    cout << "------ DAY 01 ------" << endl << endl;
     cout << "---- PART ONE ----" << endl;
     cout << "Example: ";
-    solvePartOne("Day01/exampleInput.txt");
+    solvePartOne("exampleInput.txt");
     cout << endl << "Input: ";
-    solvePartOne("Day01/input.txt");
+    solvePartOne("input.txt");
     cout << "---- PART TWO ----" << endl;
     cout << "Example: ";
-    solvePartTwoBetter("Day01/exampleInput.txt");
+    solvePartTwoBetter("exampleInput.txt");
     cout << endl << "Input: ";
-    solvePartTwoBetter("Day01/input.txt");
+    solvePartTwoBetter("input.txt");
     return 0;
 }
 
 
 void solvePartOne(string file) {
+
+    file = PATH + file;
+
     int maxVal = 0; // holds max value
     int curTot = 0; // holds current total
 
@@ -29,9 +35,10 @@ void solvePartOne(string file) {
         throw errc::no_such_file_or_directory;
     }
 
-    for(string line; getline(fin, line, '\n'); ) { // loop while valid
+    for(string line; getline(fin, line, '\n');) { // loop while valid
         if(line.empty()) { // if newline
-            maxVal = ((maxVal < curTot) ? curTot : maxVal); // use the ternary operator, making Dahlem disappointed, but my ternary fan brain happy
+            maxVal = ((maxVal < curTot) ? curTot
+                                        : maxVal); // use the ternary operator, making Dahlem disappointed, but my ternary fan brain happy
             curTot = 0; // reset count
         } else { // if text
             curTot += stoi(line); // convert to int
@@ -44,6 +51,8 @@ void solvePartOne(string file) {
 
 void solvePartTwo(string file) {
 
+    file = PATH + file;
+
     vector<int> maxVals(NUM_VALS); // holds top NUM_VALS max vals
     int curTot = 0; // holds current total
 
@@ -54,7 +63,7 @@ void solvePartTwo(string file) {
     }
 
     int elfCount = 0;
-    for(string line; getline(fin, line, '\n'); ) { // loop while valid
+    for(string line; getline(fin, line, '\n');) { // loop while valid
         if(line.empty()) { // if newline
 
             if(elfCount < NUM_VALS) {
@@ -67,7 +76,8 @@ void solvePartTwo(string file) {
 
             if(elfCount >= NUM_VALS && maxVals.back() < curTot) {
                 maxVals.back() = curTot;
-                sort(maxVals.begin(), maxVals.end(), greater<int>()); // sort each time (this is inefficent, but at these scales, works fine for this)
+                sort(maxVals.begin(), maxVals.end(),
+                     greater<int>()); // sort each time (this is inefficent, but at these scales, works fine for this)
             }
 
             curTot = 0; // reset count
@@ -95,6 +105,9 @@ void solvePartTwo(string file) {
 
 // uses priority queues, because it makes more sense than whatever nonsense I decided to try
 void solvePartTwoBetter(string file) {
+
+    file = PATH + file;
+
     priority_queue<int, vector<int>, greater<int>> maxVals;
 
     int curTot = 0; // holds current total
@@ -105,7 +118,7 @@ void solvePartTwoBetter(string file) {
         throw errc::no_such_file_or_directory;
     }
 
-    for(string line; getline(fin, line, '\n'); ) { // loop while valid
+    for(string line; getline(fin, line, '\n');) { // loop while valid
         if(line.empty()) { // if newline
             maxVals.push(curTot);
             if(maxVals.size() > NUM_VALS) {
