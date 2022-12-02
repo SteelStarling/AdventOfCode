@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Day01/
+#include "Day01/DayOne.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    DayOne();
     return 0;
 }
