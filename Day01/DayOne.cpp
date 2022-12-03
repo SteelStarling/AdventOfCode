@@ -6,7 +6,7 @@
 using namespace DayOne;
 
 
-int main() {
+void DayOne::test() {
     cout << "------ DAY 01 ------" << endl << endl;
 
     cout << "---- PART ONE ----" << endl;
@@ -19,18 +19,15 @@ int main() {
     solvePartTwoBetter("exampleInput.txt");
     cout << endl << "Input: ";
     solvePartTwoBetter("input.txt");
-    return 0;
 }
 
 
-void solvePartOne(string file) {
-
-    file = PATH + file;
+void DayOne::solvePartOne(string file) {
 
     int maxVal = 0; // holds max value
     int curTot = 0; // holds current total
 
-    ifstream fin(file);
+    ifstream fin(PATH + file);
 
     if(fin.fail()) { // throws unhandled exception if given invalid input
         throw errc::no_such_file_or_directory;
@@ -50,14 +47,12 @@ void solvePartOne(string file) {
 }
 
 
-void solvePartTwo(string file) {
-
-    file = PATH + file;
+void DayOne::solvePartTwo(string file) {
 
     vector<int> maxVals(NUM_VALS); // holds top NUM_VALS max vals
     int curTot = 0; // holds current total
 
-    ifstream fin(file);
+    ifstream fin(PATH + file);
 
     if(fin.fail()) { // throws unhandled exception if given invalid input
         throw errc::no_such_file_or_directory;
@@ -105,15 +100,13 @@ void solvePartTwo(string file) {
 
 
 // uses priority queues, because it makes more sense than whatever nonsense I decided to try
-void solvePartTwoBetter(string file) {
-
-    file = PATH + file;
+void DayOne::solvePartTwoBetter(string file) {
 
     priority_queue<int, vector<int>, greater<int>> maxVals;
 
     int curTot = 0; // holds current total
 
-    ifstream fin(file);
+    ifstream fin(PATH + file);
 
     if(fin.fail()) { // throws unhandled exception if given invalid input
         throw errc::no_such_file_or_directory;

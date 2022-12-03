@@ -3,7 +3,7 @@
 #include "Day02/DayTwo.h"
 
 int main() {
-    DayOne::main();
-    DayTwo::main();
+    DayOne::test();
+    DayTwo::test();
     return 0;
 }

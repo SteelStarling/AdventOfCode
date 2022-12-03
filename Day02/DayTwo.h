@@ -15,7 +15,7 @@ namespace DayTwo {
 
     const string PATH = "Day02/";
 
-    int main();
+    void test();
 
     void solvePartOne(string file);
 

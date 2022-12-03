@@ -19,7 +19,7 @@ namespace DayOne {
     const int NUM_VALS = 3;
     const string PATH = "Day01/";
 
-    int main();
+    void test();
 
     void solvePartOne(string file);
 
