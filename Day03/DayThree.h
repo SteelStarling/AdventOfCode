@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 using namespace std;
 
 #ifndef ADVENTOFCODE2022_DAYTHREE_H
