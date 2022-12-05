@@ -92,7 +92,7 @@ void DayFour::solvePartTwo(string file) {
         int lastMax = stoi(last.substr(splitPos + 1));
 
         // check if one contains the other
-        if((firstMin <= lastMin && firstMax >= lastMax) || (firstMin >= lastMin && firstMax <= lastMax)) {
+        if(!((firstMax < lastMin) || (firstMin > lastMax))) {
             count++;
         }
     }
