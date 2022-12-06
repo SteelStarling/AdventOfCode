@@ -8,6 +8,7 @@
 #include <fstream>
 #include <vector>
 #include <queue>
+#include <algorithm>
 using namespace std;
 
 #ifndef ADVENTOFCODE2022_DAYONE_H

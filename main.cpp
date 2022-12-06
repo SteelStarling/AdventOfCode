@@ -3,6 +3,7 @@
 #include "Day02/DayTwo.h"
 #include "Day03/DayThree.h"
 #include "Day04/DayFour.h"
+#include "Day05/DayFive.h"
 
 using namespace DayFour;
 
