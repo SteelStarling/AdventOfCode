@@ -3,12 +3,14 @@
 // Created by Taylor Hancock on 12/05/22.
 //
 
-#include "DayFive.h"
+#include "Day05.h"
 
-using namespace DayFive;
+using namespace Day05;
+
+// Note: Reimplement using classes, as it would probably work well
 
 
-void DayFive::test() {
+void Day05::test() {
     cout << "------ DAY 05 ------" << endl;
 
     cout << endl << "---- PART ONE ----" << endl;
@@ -24,7 +26,7 @@ void DayFive::test() {
 }
 
 
-void DayFive::solvePartOne(string file) {
+void Day05::solvePartOne(string file) {
 
     ifstream fin(PATH + file);
 
@@ -128,7 +130,7 @@ void DayFive::solvePartOne(string file) {
 }
 
 
-void DayFive::solvePartTwo(string file) {
+void Day05::solvePartTwo(string file) {
     ifstream fin(PATH + file);
 
     if(fin.fail()) { // throws unhandled exception if given invalid input

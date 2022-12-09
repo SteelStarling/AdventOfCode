@@ -14,7 +14,7 @@ using namespace std;
 #ifndef ADVENTOFCODE2022_DAYONE_H
 #define ADVENTOFCODE2022_DAYONE_H
 
-namespace DayOne {
+namespace Day01 {
 
     const int NUM_VALS = 3;
     const string PATH = "Day01/";

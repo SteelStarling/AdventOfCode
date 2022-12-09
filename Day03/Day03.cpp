@@ -3,10 +3,10 @@
 // Created by Taylor Hancock on 12/03/22.
 //
 
-#include "DayThree.h"
-using namespace DayThree;
+#include "Day03.h"
+using namespace Day03;
 
-void DayThree::test() {
+void Day03::test() {
     cout << "------ DAY 03 ------" << endl << endl;
 
     cout << "---- PART ONE ----" << endl;
@@ -21,7 +21,7 @@ void DayThree::test() {
     solvePartTwo("input.txt");
 }
 
-void DayThree::solvePartOne(string file) {
+void Day03::solvePartOne(string file) {
 
     ifstream fin(PATH + file);
 
@@ -67,7 +67,7 @@ void DayThree::solvePartOne(string file) {
 }
 
 
-void DayThree::solvePartTwo(string file) {
+void Day03::solvePartTwo(string file) {
 
     ifstream fin(PATH + file);
 

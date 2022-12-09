@@ -2,11 +2,11 @@
 // Created by Taylor Hancock on 12/01/22.
 //
 
-#include "DayOne.h"
-using namespace DayOne;
+#include "Day01.h"
+using namespace Day01;
 
 
-void DayOne::test() {
+void Day01::test() {
     cout << "------ DAY 01 ------" << endl << endl;
 
     cout << "---- PART ONE ----" << endl;
@@ -22,7 +22,7 @@ void DayOne::test() {
 }
 
 
-void DayOne::solvePartOne(string file) {
+void Day01::solvePartOne(string file) {
 
     int maxVal = 0; // holds max value
     int curTot = 0; // holds current total
@@ -47,7 +47,7 @@ void DayOne::solvePartOne(string file) {
 }
 
 
-void DayOne::solvePartTwo(string file) {
+void Day01::solvePartTwo(string file) {
 
     vector<int> maxVals(NUM_VALS); // holds top NUM_VALS max vals
     int curTot = 0; // holds current total
@@ -100,7 +100,7 @@ void DayOne::solvePartTwo(string file) {
 
 
 // uses priority queues, because it makes more sense than whatever nonsense I decided to try
-void DayOne::solvePartTwoBetter(string file) {
+void Day01::solvePartTwoBetter(string file) {
 
     priority_queue<int, vector<int>, greater<int>> maxVals;
 

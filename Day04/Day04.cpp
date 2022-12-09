@@ -3,12 +3,12 @@
 // Created by Taylor Hancock on 12/05/22.
 //
 
-#include "DayFour.h"
+#include "Day04.h"
 
-using namespace DayFour;
+using namespace Day04;
 
 
-void DayFour::test() {
+void Day04::test() {
     cout << "------ DAY 04 ------" << endl << endl;
 
     cout << "---- PART ONE ----" << endl;
@@ -24,7 +24,7 @@ void DayFour::test() {
 }
 
 // no error checking because here it's not needed, could cause issues if actually attempted
-void DayFour::solvePartOne(string file) {
+void Day04::solvePartOne(string file) {
 
     ifstream fin(PATH + file);
 
@@ -62,7 +62,7 @@ void DayFour::solvePartOne(string file) {
     cout << count << endl;
 }
 
-void DayFour::solvePartTwo(string file) {
+void Day04::solvePartTwo(string file) {
 
     ifstream fin(PATH + file);
 

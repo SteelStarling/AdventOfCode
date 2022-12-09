@@ -3,11 +3,11 @@
 // Created by Taylor Hancock on 12/02/22.
 //
 
-#include "DayTwo.h"
-using namespace DayTwo;
+#include "Day02.h"
+using namespace Day02;
 
 
-void DayTwo::test() {
+void Day02::test() {
     cout << "------ DAY 02 ------" << endl << endl;
 
     cout << "---- PART ONE ----" << endl;
@@ -23,7 +23,7 @@ void DayTwo::test() {
 }
 
 
-void DayTwo::solvePartOne(string file) {
+void Day02::solvePartOne(string file) {
 
     ifstream fin(PATH + file);
 
@@ -51,7 +51,7 @@ void DayTwo::solvePartOne(string file) {
 }
 
 
-void DayTwo::solvePartTwo(string file) {
+void Day02::solvePartTwo(string file) {
 
     ifstream fin(PATH + file);
 

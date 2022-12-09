@@ -12,7 +12,7 @@ using namespace std;
 #ifndef ADVENTOFCODE2022_DAYFOUR_H
 #define ADVENTOFCODE2022_DAYFOUR_H
 
-namespace DayFour {
+namespace Day04 {
 
     const string PATH = "Day04/";
 

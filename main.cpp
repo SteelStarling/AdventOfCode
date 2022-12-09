@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Day01/DayOne.h"
-#include "Day02/DayTwo.h"
-#include "Day03/DayThree.h"
-#include "Day04/DayFour.h"
-#include "Day05/DayFive.h"
+#include "Day01/Day01.h"
+#include "Day02/Day02.h"
+#include "Day03/Day03.h"
+#include "Day04/Day04.h"
+#include "Day05/Day05.h"
 
-using namespace DayFive;
+using namespace Day05;
 
 int main() {
     test();
