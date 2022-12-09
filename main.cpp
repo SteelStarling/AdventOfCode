@@ -5,7 +5,7 @@
 #include "Day04/DayFour.h"
 #include "Day05/DayFive.h"
 
-using namespace DayFour;
+using namespace DayFive;
 
 int main() {
     test();
