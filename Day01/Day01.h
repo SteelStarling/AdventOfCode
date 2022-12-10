@@ -3,6 +3,9 @@
 // Created by Taylor Hancock on 12/01/22.
 //
 
+#ifndef ADVENTOFCODE2022_DAYONE_H
+#define ADVENTOFCODE2022_DAYONE_H
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -11,8 +14,6 @@
 #include <algorithm>
 using namespace std;
 
-#ifndef ADVENTOFCODE2022_DAYONE_H
-#define ADVENTOFCODE2022_DAYONE_H
 
 namespace Day01 {
 
