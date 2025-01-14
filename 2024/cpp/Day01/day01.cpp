@@ -4,13 +4,23 @@
 #include <string>
 #include <vector>
 
-void main() {
-    std::cout << getTotalDifference("exampleInput.txt") << std::endl;
+#include "day01.hpp"
+
+int main() {
+    int totDiff = getTotalDifference("exampleInput.txt");
+    std::cout << "Example: " << totDiff << std::endl;
+
+    totDiff = getTotalDifference("input.txt");
+    std::cout << "Input: " << totDiff << std::endl;
+
+
+    
+    return 0;
 }
 
 int getTotalDifference(std::string fileName) {
     // Open file and create lists
-    std::ifstream file("\\Inputs\\" + fileName);
+    std::ifstream file(".\\Inputs\\" + fileName);
     std::vector<int> list1, list2;
 
     // Read in every line (2 numbers a line)
