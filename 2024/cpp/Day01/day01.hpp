@@ -4,7 +4,6 @@
 #include <string>
 
 int main();
-
 int getTotalDifference(std::string fileName);
 
 #endif //DAY01

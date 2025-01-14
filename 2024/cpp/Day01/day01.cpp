@@ -7,15 +7,27 @@
 #include "day01.hpp"
 
 int main() {
+<<<<<<< HEAD
     int diff = getTotalDifference("exampleInput.txt");
     std::cout << diff << std::endl;
 
     return diff;
+=======
+    int totDiff = getTotalDifference("exampleInput.txt");
+    std::cout << "Example: " << totDiff << std::endl;
+
+    totDiff = getTotalDifference("input.txt");
+    std::cout << "Input: " << totDiff << std::endl;
+
+
+    
+    return 0;
+>>>>>>> 45142ba3d20b3f9124d87803ecfed35b7ba1198c
 }
 
 int getTotalDifference(std::string fileName) {
     // Open file and create lists
-    std::ifstream file("\\Inputs\\" + fileName);
+    std::ifstream file(".\\Inputs\\" + fileName);
     std::vector<int> list1, list2;
 
     // Read in every line (2 numbers a line)
