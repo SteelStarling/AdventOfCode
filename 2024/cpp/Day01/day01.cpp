@@ -26,9 +26,11 @@ int getTotalDifference(std::string fileName) {
     // Read in every line (2 numbers a line)
     int a, b;
     while (file >> a >> b) {
+        std::cout << "a: " << a << "   b: " << b << std::endl;
         list1.push_back(a);
         list2.push_back(b);
     }
+    file.close();
 
     // Sort lists
     std::sort(list1.begin(), list1.end());
