@@ -11,9 +11,6 @@ class Solution_24 {
 
 public:
 
-    static const string exampleFile;
-    static const string inputFile;
-
     Solution_24::Solution_24(int day, string filePath);
 
     virtual string partOneSolver(string fileName);
@@ -27,20 +24,29 @@ public:
         
 
         // Get answers from Part One
-        string exampleOneAnswer = partOneSolver(filePathPrefix + exampleFile);
-        string inputOneAnswer = partOneSolver(filePathPrefix + inputFile);
+        string exampleOneAnswer = partOneSolver(exampleFile);
+        string inputOneAnswer = partOneSolver(inputFile);
 
         // Get answers from Part Two
-        string exampleTwoAnswer = partTwoSolver(filePathPrefix + exampleFile);
-        string inputTwoAnswer = partTwoSolver(filePathPrefix + inputFile);
+        string exampleTwoAnswer = partTwoSolver(exampleFile);
+        string inputTwoAnswer = partTwoSolver(inputFile);
 
         // Print Footer
-        cout << "   =============== DAY " << setfill('0') << setw(2) << day << " ===============   " << endl;
+        cout << "   ============= DAY " << setfill('0') << setw(2) << day << " END =============   " << endl << endl << endl << endl;
     }
 
+    int getDay() { return day; }
+
 private:
+    // Single names for example and input files
+    static const string exampleFile;
+    static const string inputFile;
+
+    // Stores day of this solution
     const int day;
-    const string filePathPrefix; // stores path to files
+
+    // Stores path to files
+    const string filePathPrefix;
 };
 
 #endif //SOLUTION_24
