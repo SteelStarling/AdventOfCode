@@ -1,8 +1,10 @@
 #ifndef SOLUTION_24
 #define SOLUTION_24
 
+#include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using namespace std;
@@ -11,36 +13,21 @@ class Solution_24 {
 
 public:
 
-    Solution_24::Solution_24(int day, string filePath);
+    Solution_24(int day, string filePath);
 
-    virtual string partOneSolver(string fileName);
-    virtual string partTwoSolver(string fileName);
+    virtual string partOneSolver(string fileName) { return "a"; }
+    virtual string partTwoSolver(string fileName) { return "a"; }
 
-    int testDay() {
-        // Print Header
-        cout << "   =============== DAY " << setfill('0') << setw(2) << day << " ===============   " << endl;
+    int testDay();
 
-        // Get correct answers
-        
-
-        // Get answers from Part One
-        string exampleOneAnswer = partOneSolver(exampleFile);
-        string inputOneAnswer = partOneSolver(inputFile);
-
-        // Get answers from Part Two
-        string exampleTwoAnswer = partTwoSolver(exampleFile);
-        string inputTwoAnswer = partTwoSolver(inputFile);
-
-        // Print Footer
-        cout << "   ============= DAY " << setfill('0') << setw(2) << day << " END =============   " << endl << endl << endl << endl;
-    }
-
-    int getDay() { return day; }
+    const int getDay();
+    const string getDayString();
 
 private:
-    // Single names for example and input files
-    static const string exampleFile;
-    static const string inputFile;
+    // Single names for answer, example, and input files
+    inline static const string answerFile = "_answer.txt";
+    inline static const string exampleFile = "_example.txt";
+    inline static const string inputFile = "_input.txt";
 
     // Stores day of this solution
     const int day;
