@@ -15,10 +15,10 @@ public:
 
     Solution_24(int day, string filePath);
 
-    virtual string partOneSolver(string fileName) { return "a"; }
-    virtual string partTwoSolver(string fileName) { return "a"; }
+    virtual string partOneSolver(string fileName) { return "Error: Not overriding virtual function!"; }
+    virtual string partTwoSolver(string fileName) { return "Error: Not overriding virtual function!"; }
 
-    int testDay();
+    void testDay();
 
     const int getDay();
     const string getDayString();

@@ -7,6 +7,8 @@
 #include "day01.hpp"
 
 int main() {
+    
+
     int totDiff = getTotalDifference("exampleInput.txt");
     std::cout << "Example: " << totDiff << std::endl;
 
@@ -18,7 +20,7 @@ int main() {
     return 0;
 }
 
-int getTotalDifference(std::string fileName) {
+int Day01_24::getTotalDifference(std::string fileName) {
     // Open file and create lists
     std::ifstream file(".\\Inputs\\" + fileName);
     std::vector<int> list1, list2;

@@ -2,7 +2,7 @@
 
 Solution_24::Solution_24(int day, string filePath) : day(day), filePathPrefix(filePath) { /*all items initialized*/ }
 
-int Solution_24::testDay() {
+void Solution_24::testDay() {
     cout << "   =============== DAY " << setfill('0') << setw(2) << day << " ===============   " << endl;
 
     // Get correct answers
