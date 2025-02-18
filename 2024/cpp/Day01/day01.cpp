@@ -6,20 +6,6 @@
 
 #include "day01.hpp"
 
-int main() {
-    
-
-    int totDiff = getTotalDifference("exampleInput.txt");
-    std::cout << "Example: " << totDiff << std::endl;
-
-    totDiff = getTotalDifference("input.txt");
-    std::cout << "Input: " << totDiff << std::endl;
-
-
-    
-    return 0;
-}
-
 int Day01_24::getTotalDifference(std::string fileName) {
     // Open file and create lists
     std::ifstream file(".\\Inputs\\" + fileName);
@@ -47,3 +33,5 @@ int Day01_24::getTotalDifference(std::string fileName) {
     // Return total difference
     return totDiff;
 }
+
+Day01_24::Day01_24(int day, string filePath) : Solution_24(day, filePath) { }

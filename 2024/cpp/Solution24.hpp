@@ -9,11 +9,13 @@
 
 using namespace std;
 
+void printStuff();
+
 class Solution_24 {
 
 public:
 
-    Solution_24(int day, string filePath);
+    Solution_24(int day, string filePath) : day(day), filePathPrefix(filePath) { /*all items initialized*/ }
 
     virtual string partOneSolver(string fileName) { return "Error: Not overriding virtual function!"; }
     virtual string partTwoSolver(string fileName) { return "Error: Not overriding virtual function!"; }

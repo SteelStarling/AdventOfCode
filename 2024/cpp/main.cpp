@@ -6,6 +6,7 @@ int main() {
     // define statics (specify filenames we care about)
     string filePath("../inputs/");
     Solution_24 test(1, filePath);
+    printStuff();
 
     cout << "Hiiii" << endl;
 

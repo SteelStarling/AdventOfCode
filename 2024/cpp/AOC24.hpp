@@ -9,6 +9,8 @@ class AdventOfCode_24 {
     static const int daysInAdvent = 25;
     
     Solution_24 calendar[daysInAdvent];
+
+    AdventOfCode_24();
 };
 
 #endif //AOC_24

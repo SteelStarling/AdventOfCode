@@ -1,5 +1,9 @@
 #include "Solution24.hpp"
 
+void printStuff() {
+    cout << "wow, this works" << endl;
+}
+
 Solution_24::Solution_24(int day, string filePath) : day(day), filePathPrefix(filePath) { /*all items initialized*/ }
 
 void Solution_24::testDay() {
